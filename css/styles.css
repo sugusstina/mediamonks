@@ -353,6 +353,7 @@ template {
 * {
   box-sizing: border-box;
 }
+
 /***CUSTOM FONTS***/
 
 @font-face {
@@ -385,4 +386,112 @@ template {
 
 body {
   font-family: 'Klavika', Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+}
+
+.slider {
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.slider-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 30px;
+}
+
+.slider-item {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 64px;
+  margin: 0;
+  display: inline;
+}
+
+.slider-item span {
+  border-bottom: 1px solid #fff;
+}
+
+.first-slide {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slider-paragraph {
+  font-size: 16px;
+}
+
+.logo {
+  position: fixed;
+  bottom: 10px;
+  right: 40px;
+}
+
+.item-left {
+  flex-direction: row;
+  align-items: center;
+}
+
+.item-right {
+  text-align: right;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.arrow-right,
+.arrow-left {
+  position: fixed;
+  top: calc(50% - 40px);
+  right: 0;
+  cursor: pointer;
+}
+
+.arrow-left {
+  transform: scaleX(-1);
+  left: 0;
+}
+
+.footer {
+  background: black;
+  width: 70vw;
+}
+
+.nav-footer {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 25px;
+  height: 50vh;
+  justify-content: space-between;
+  margin-right: 40px;
+  font-size: 16px;
+}
+
+.nav-footer-list {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-footer a {
+  color: #fff;
+}
+
+.nav-footer-list a {
+  text-decoration: none;
+}
+
+.social-network-icon {
+  margin: 0 7px;
 }
