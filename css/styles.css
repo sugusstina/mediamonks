@@ -348,7 +348,7 @@ template {
   display: none;
 }
 
-/************END NORMALIZE*************/
+/***END NORMALIZE***/
 
 * {
   box-sizing: border-box;
@@ -383,6 +383,81 @@ template {
   font-weight: 600;
   font-display: swap;
 }
+
+ /***LOADING PAGE***/
+
+ .loading-page {
+   position: fixed;
+   background: black;
+   width: 100vw;
+   height: 100vh;
+   z-index: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all .5s ease;
+   opacity: 1;
+ }
+
+ .loading-text {
+  text-align: center;
+  font-style: italic;
+  margin-top: 75px;
+  animation: boing 0.5s cubic-bezier(0,1.92,.83,.67) forwards;
+  animation-delay: 0.5s;
+  transform: scale(0);
+ }
+
+ .loading-container {
+  text-align: center;
+  filter: drop-shadow(0 0 60px #fff);
+}
+
+.loading-monk {
+  position: relative;
+  animation: boing 0.5s ease, bounceMonk 2s  ease infinite;
+}
+
+.surprise-text {
+  animation: surpriseText 0.5s ease forwards;
+  animation-delay: 1.5s;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-flex;
+  max-width: 0;
+}
+
+@keyframes boing {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceMonk {
+  0% {
+    top: -10px;
+  }
+  50% {
+    top: 10px;
+  }
+  100% {
+    top: -10px;
+  }
+}
+
+@keyframes surpriseText {
+  0% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 200px;
+  }
+}
+
+/***SLIDER ***/
 
 body {
   font-family: 'Klavika', Arial, Helvetica, sans-serif;
