@@ -622,3 +622,28 @@ body {
   height: 100%;
   display: flex;
 }
+
+@media screen and (max-width: 768px) {
+  .slider-section {
+    padding: 40px;
+  }
+
+  .slider-item {
+    font-size: 30px;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    width: 30px;
+  }
+
+  .numbered-nav {
+    display: none;
+  }
+
+  .logo {
+    bottom: 5px;
+    right: 20px;
+    width: 70px;
+  }
+}
