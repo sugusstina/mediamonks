@@ -350,6 +350,10 @@ template {
 
 /***END NORMALIZE***/
 
+:root {
+  --transition-main: all 0.5s ease;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -395,7 +399,7 @@ template {
    display: flex;
    align-items: center;
    justify-content: center;
-   transition: all .5s ease;
+   transition: var(--transition-main);
    opacity: 1;
  }
 
@@ -466,22 +470,30 @@ body {
 
 .container {
   display: flex;
+  overflow: hidden;
 }
 
 .slider {
+  position: relative;
   background-image: url('../images/background.jpg');
   background-repeat: no-repeat;
   background-color: black;
   background-position: center;
   background-size: cover;
   display: flex;
+  right: 0;
+  transition: all 1s ease;
 }
 
 .slider-section {
   width: 100vw;
   height: 100vh;
   display: flex;
-  padding: 30px;
+  padding: 80px 100px;
+}
+
+.slider-section > * {
+  transition: var(--transition-main);
 }
 
 .slider-item {
@@ -528,6 +540,12 @@ body {
   top: calc(50% - 40px);
   right: 0;
   cursor: pointer;
+  transition: var(--transition-main);
+}
+
+.arrow-right:hover,
+.arrow-left:hover {
+  opacity: 0.5;
 }
 
 .arrow-left {
