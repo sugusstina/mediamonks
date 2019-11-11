@@ -588,3 +588,37 @@ body {
 .social-network-icon {
   margin: 0 7px;
 }
+
+/***NUMBERED NAVIGATION***/
+
+.numbered-nav {
+  position: fixed;
+  bottom: 40px;
+  left: 100px;
+  list-style: none;
+  display: flex;
+  color: #fff;
+  border: 2px dotted;
+  padding: 0;
+  margin: 0;
+}
+
+.numbered-nav li {
+  border-right: 2px dotted;
+  cursor: pointer;
+  width: 25px;
+  text-align: center;
+  padding: 3px;
+  line-height: 0.75;
+}
+
+.numbered-nav li:last-child {
+  border-right: none;
+}
+
+.numbered-nav li.active span {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
